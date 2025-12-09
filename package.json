@@ -1,0 +1,16 @@
+{
+  "name": "airbnb_bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.2",
+    "playwright-bdd": "^8.4.2"
+  }
+}

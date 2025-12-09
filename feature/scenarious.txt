@@ -1,0 +1,16 @@
+Tesla website test scenarious
+
+1. Sample test
+2. welcome page ( check if all of the elements are on the page )
+3. check if specific car page is working
+4. car order functionality
+5. "Help me charge" functionality
+6. "Pre owned" filters
+7. Single pre-owned car page
+8. Shop add to cart functionality ( multiple items )
+9. Search + keyboard buttons functionality
+10. Map interaction
+11. Language switch check
+12. Responsive design check
+13. Find charger Riga
+14. Compare models functionality
