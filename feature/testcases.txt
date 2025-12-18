@@ -1,0 +1,52 @@
+1. Welcome page elements check
+
+Challenges
+2. E-commerce Product Listing & Pagination Page
+pagination, 
+verify each card elements
+
+3. E-commerce Product Filtering & Search Page
+filters
+reset filters button
+
+4. Role-Based Login Flow Page
+Login with user
+Login with admin
+empty fields
+invalid data
+logout
+
+5. E-commerce End-to-End Product Purchasing Flow Page
+verify each card elements
+add to cart
+cart overview
+address section
+payment section
+success section
+
+
+6. Social Media Feed Interaction Challenge Page
+verify each card elements
+like functionality ( like count + notification )
+unlike functionality ( like count + notification )
+like multiple posts ( like count + notification )
+
+7. Shadow DOM Login Form Interaction Challenge Page
+interact with alert on:
+valid data
+empty fields
+empty username, valid password
+valid username, empty password
+fill button
+reset button
+
+8. Simple Search Engine UI Automation Challenge Page
+valid search 
+empty search
+
+9. Job Application Form Automation Challenge Page
+submit valid form data
+preview valid form data
+submit invalid email form data
+Add and delete skill chips
+Clear all form fields
