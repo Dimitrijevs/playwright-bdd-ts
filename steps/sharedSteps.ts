@@ -5,5 +5,5 @@ import { locators } from '../support/locators';
 const { Given, When, Then } = createBdd();
 
 Given('User navigates to the welcome page', async ({ page }) => {
-    await page.goto(locators.link);
+    await page.goto(locators.webApp.link);
 });
