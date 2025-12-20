@@ -77,10 +77,23 @@ Then('User should see {string} section with {int} steps', async ({ page }, secti
     }
 });
 
-// Then('User should see {string} section', async ({ page }, sectionName: string) => {
-//     // TODO: Implement verification for section
-// });
+Then('User should see {string} section', async ({ page }, sectionName: string) => {
+    
+    const sectionTitle = page.getByRole('heading', { name: 'Share. Suggest. Shape.' });
+    await expect(sectionTitle).toHaveText(sectionName);
 
-// Then('User should see footer with app logo and links', async ({ page }) => {
-//     // TODO: Implement verification for footer
-// });
+    const sectionParagraph = page.locator('p.MuiTypography-root.MuiTypography-body1.css-1oe4aw5');
+    await expect(sectionParagraph).toBeVisible();
+});
+
+Then('User should see footer with app logo and links', async ({ page }) => {
+    
+    const footerLogo = page.locator("//div[contains(@class,'flex justify-center md:justify-start')]//a");
+    await expect(footerLogo).toBeVisible();
+
+    const footerTopicsSection = page.locator('div.flex.flex-col.sm\\:flex-row.flex-wrap.gap-8.text-sm');
+    await expect(footerTopicsSection).toBeVisible();
+
+    const footerLinksSection = page.locator('div.flex.justify-center.md\\:justify-end');
+    await expect(footerLinksSection).toBeVisible();
+});

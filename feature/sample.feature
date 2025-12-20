@@ -1,5 +1,6 @@
 Feature: Playwright site
 
+    @Sample
     Scenario: Check get started link
         Given I am on home page
         When I click link "Get started"

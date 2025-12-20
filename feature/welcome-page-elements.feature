@@ -1,6 +1,6 @@
 Feature: Welcome Page Elements
 
-    @Scenario1
+    @WelcomePageElements
     Scenario: Verify presence of welcome page elements
         Given User navigates to the welcome page
         Then User should see app logo
@@ -8,5 +8,5 @@ Feature: Welcome Page Elements
         Then User should see "Start Exploring" and "Challenges" buttons
         Then User should see features section with 3 elements
         Then User should see "How it works?" section with 3 steps
-        # Then User should see "Share. Suggest. Shape" section
-        # Then User should see footer with app logo and links
+        Then User should see "Share. Suggest. Shape." section
+        Then User should see footer with app logo and links
