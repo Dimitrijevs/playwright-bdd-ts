@@ -2,7 +2,7 @@ Feature: Welcome Page Elements
 
     @WelcomePageElements
     Scenario: Verify presence of welcome page elements
-        Given User navigates to the welcome page
+        Given User is on the welcome page
         Then User should see app logo
         Then User should see welcome message - "Practice Automation Testing the Way It Happens in the Real World"
         Then User should see "Start Exploring" and "Challenges" buttons

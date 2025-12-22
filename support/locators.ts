@@ -31,7 +31,14 @@ const locators: Locators = {
         footerTopicsSection: 'div.flex.flex-col.sm\\:flex-row.flex-wrap.gap-8.text-sm',
         footerLinksSection: 'div.flex.justify-center.md\\:justify-end'
 
-    }
+    },
+
+    productListingAndPaginationPage: {
+        link: "//body//div[@id='root']//div//div[1]//div[2]//button[1]",
+
+        productsList: 'div.grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-4.gap-6.w-full.max-w-6xl'
+        
+    },
 };
 
 export { locators };
