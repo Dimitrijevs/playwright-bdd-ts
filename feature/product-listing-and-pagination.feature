@@ -4,7 +4,7 @@ Feature: E-commerce Product Listing & Pagination
   Scenario: Verify product listing and pagination functionality
     Given User is on the welcome page
     Then User clicks on the challenges button
-    When User clicks on the E-commerce Product Listing & Pagination challenge button
+    When User clicks on the "E-commerce Product Listing & Pagination" challenge button
     Then User should see "Explore Our Products" title
 
     # Boundary check: Start

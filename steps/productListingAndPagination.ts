@@ -4,22 +4,6 @@ import { locators } from '../support/locators';
 
 const { Given, When, Then } = createBdd();
 
-Then('User clicks on the challenges button', async ({page}) => {
-  
-    await page.locator(locators.welcomePage.challengesButton).click();
-});
-
-When('User clicks on the E-commerce Product Listing & Pagination challenge button', async ({page}) => {
-  
-    await page.locator(locators.productListingAndPaginationPage.link).click();
-});
-
-Then('User should see {string} title', async ({page}, title: string) => {
-  
-    const productPageTitle = page.getByText(title, { exact: true }); 
-    await expect(productPageTitle).toBeVisible();
-});
-
 // repreated step
 Then('the {string} pagination button should be disabled', async ({page}, buttonName: string) => {
   

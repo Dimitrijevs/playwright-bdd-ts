@@ -39,6 +39,12 @@ const locators: Locators = {
         productsList: 'div.grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-4.gap-6.w-full.max-w-6xl'
         
     },
+
+    productFilteringPage: {
+        link: "//body/div[@id='root']/div/div[@class='MuiContainer-root MuiContainer-maxWidthLg py-6 css-17nsc56']/div[@class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6']/div[2]",
+
+        
+    }
 };
 
 export { locators };

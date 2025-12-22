@@ -5,7 +5,7 @@ Challenges
 pagination, 
 verify each card elements
 
-3. E-commerce Product Filtering & Search Page
+3. E-commerce Product Filtering
 filters
 reset filters button
 
