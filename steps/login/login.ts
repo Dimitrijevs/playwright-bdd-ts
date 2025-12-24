@@ -1,4 +1,5 @@
 import { expect } from "@playwright/test";
+import { log } from "console";
 import { createBdd } from "playwright-bdd";
 
 const { Given, When, Then } = createBdd();
@@ -19,4 +20,22 @@ Then("User should see {string} based title", async ({ page }, role: string) => {
   await expect(welcomeMessage).toHaveText(
     "You are logged in as " + role.toUpperCase()
   );
+});
+
+Then("User press the logout button", async ({ page }) => {
+    const logoutButton = page.getByRole('button', { name: 'Logout' });
+
+    await logoutButton.click();
+
+    await page.waitForLoadState("networkidle");
+
+    expect(logoutButton).not.toBeVisible();
+});
+
+Then("User should not see welcome message", async ({ page }) => {
+  const welcomeMessage = page.locator(
+    "div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.text-center > div.MuiAlert-message.css-127h8j3"
+  );
+
+  await expect(welcomeMessage).toHaveCount(0);
 });

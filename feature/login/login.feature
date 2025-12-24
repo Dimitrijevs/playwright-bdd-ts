@@ -10,6 +10,8 @@ Feature: Valid Login functionality
     Then User enters "<username>" and "<password>"
     Then User clicks on the login button
     Then User should see "<role>" based title
+    Then User press the logout button
+    Then User should not see welcome message
 
     Examples:
       | username | password | role  |
