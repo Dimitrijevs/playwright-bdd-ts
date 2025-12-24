@@ -12,8 +12,8 @@ reset filters button
 4. Role-Based Login Flow Page
 Login with user
 Login with admin
-empty fields
 invalid data
+empty fields
 logout
 
 5. E-commerce End-to-End Product Purchasing Flow Page

@@ -7,7 +7,7 @@ Feature: Valid Login functionality
     Then User clicks on the challenges button
     When User clicks on the "Role-Based Login Flow" challenge button
     Then User should see "Challenge Scenario" title
-    Then User enters valid "<username>" and "<password>"
+    Then User enters "<username>" and "<password>"
     Then User clicks on the login button
     Then User should see "<role>" based title
 
