@@ -3,17 +3,6 @@ import { createBdd } from "playwright-bdd";
 
 const { Given, When, Then } = createBdd();
 
-When('User selects the {string} category from the category filter', async ({ page }, category: string) => {
-
-    await page.getByLabel('category').click();
-
-    const option = page.getByRole('option', { name: category, exact: true });
-    
-    await option.click();
-    
-    await page.waitForLoadState('networkidle');
-});
-
 Then(
   "User verifies that only products from the selected {string} category are displayed",
   async ({ page }, category: string) => {

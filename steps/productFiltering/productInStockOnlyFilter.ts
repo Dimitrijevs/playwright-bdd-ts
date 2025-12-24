@@ -3,16 +3,6 @@ import { createBdd } from "playwright-bdd";
 
 const { Given, When, Then } = createBdd();
 
-Then("User checks the In Stock Only filter checkbox", async ({ page }) => {
-  const checkBox = page.locator("input.PrivateSwitchBase-input.css-j8yymo");
-
-  await checkBox.check();
-
-  await page.waitForLoadState("networkidle");
-
-  expect(await checkBox.isChecked()).toBe(true);
-});
-
 Then(
   "User verifies that only products that are {string} are displayed",
   async ({ page }, stockStatus: string) => {
