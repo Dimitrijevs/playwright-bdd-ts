@@ -30,20 +30,11 @@ like functionality ( like count + notification )
 unlike functionality ( like count + notification )
 like multiple posts ( like count + notification )
 
-7. Shadow DOM Login Form Interaction Challenge Page
-interact with alert on:
-valid data
-empty fields
-empty username, valid password
-valid username, empty password
-fill button
-reset button
-
-8. Simple Search Engine UI Automation Challenge Page
+7. Simple Search Engine UI Automation Challenge Page
 valid search 
 empty search
 
-9. Job Application Form Automation Challenge Page
+8. Job Application Form Automation Challenge Page
 submit valid form data
 preview valid form data
 submit invalid email form data
