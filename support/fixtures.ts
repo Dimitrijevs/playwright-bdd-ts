@@ -5,7 +5,7 @@ type MyContext = {
       cartTotalCost?: number;
       username?: string;
       surname?:  string;
-      street?: string;
+      streetName?: string;
     };
 };
 

@@ -73,7 +73,7 @@ Then('User verifies that the total cost in the cart is equal to {int}', async ({
 
   expect(actualTotal).toBe(totalSum);
 
-  ctx.purchasePage.cartTotalCost = totalSum;
+  ctx.purchasePage!.cartTotalCost = totalSum;
 });
 
 Then('User proceeds to add Address details for shipping', async ({page}) => {
@@ -93,9 +93,9 @@ Then('User enters {string}, {string}, {string} in the needed fields', async ({pa
   await page.getByRole('textbox', { name: 'Last Name' }).fill(lastName);
   await page.getByRole('textbox', { name: 'Address' }).fill(street);
 
-  ctx.purchasePage.username = firstName;
-  ctx.purchasePage.surname = lastName;
-  ctx.purchasePage.street = street;
+  ctx.purchasePage!.username = firstName;
+  ctx.purchasePage!.surname = lastName;
+  ctx.purchasePage!.streetName = street;
 });
 
 Then('User verifies that {string} button is enabled and clicks it', async ({page}, buttonName: string) => {
@@ -113,11 +113,11 @@ Then('User selects {string} option', async ({page}, payNow: string) => {
 
 Then('User verifies that the order confirmation page shows correct billing details and order summary', async ({page, ctx}) => {
   
-  await expect(page.getByText(ctx.purchasePage.username + ' ' + ctx.purchasePage.surname, { exact: true })).toBeVisible();
+  await expect(page.getByText(ctx.purchasePage!.username + ' ' + ctx.purchasePage!.surname, { exact: true })).toBeVisible();
 
-  await expect(page.getByText(ctx.purchasePage.street, { exact: true })).toBeVisible();
+  await expect(page.getByText(ctx.purchasePage?.streetName || '', { exact: true })).toBeVisible();
 
-  await expect(page.getByRole('heading', { name: 'Total Paid: $' + ctx.purchasePage.cartTotalCost })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Total Paid: $' + ctx.purchasePage!.cartTotalCost })).toBeVisible();
 });
 
 Then('User verifies that {string} button navigates back to the product listing page', async ({page}, homeButtonName: string) => {
