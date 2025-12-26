@@ -24,7 +24,6 @@ address section
 payment section
 success section
 
-
 6. Social Media Feed Interaction Challenge Page
 verify each card elements
 like functionality ( like count + notification )

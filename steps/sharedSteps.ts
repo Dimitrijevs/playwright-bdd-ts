@@ -15,7 +15,7 @@ Then('User clicks on the challenges button', async ({page}) => {
 
 Then('User should see {string} title', async ({page}, title: string) => {
   
-    const productPageTitle = page.getByText(title, { exact: true }); 
+    const productPageTitle = page.getByRole('heading', { name: title });
     await expect(productPageTitle).toBeVisible();
 });
 
