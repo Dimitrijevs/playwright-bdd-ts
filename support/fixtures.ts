@@ -6,7 +6,11 @@ type MyContext = {
       username?: string;
       surname?:  string;
       streetName?: string;
-    };
+    },
+    socialMediaPost?: {
+      authorUsername?: string;
+      orderNumber?: number;
+    }
 };
 
 export const test = base.extend<{ ctx: MyContext }>({
@@ -15,7 +19,8 @@ export const test = base.extend<{ ctx: MyContext }>({
     // This object is created fresh for EVERY scenario
     // do not effect performance by putting heavy setup code here
     const ctx: MyContext = {
-      purchasePage: {}
+      purchasePage: {},
+      socialMediaPost: {}
     }; 
     await use(ctx);
   },
