@@ -1,0 +1,14 @@
+1. Generate tests
+npx bddgen
+
+2. Run all tests
+npx playwright test
+
+3. Run tests with specific tags
+npx playwright test --grep "@tagName"
+
+4. Different ways of running tests
+4.1. empty state, user only recieves info in terminal 
+4.2. --ui - with ui interface
+4.3. --debug - availability to see step by step execution
+4.4. --headed - availability to see live execution

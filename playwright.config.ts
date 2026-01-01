@@ -4,9 +4,20 @@ import { defineBddConfig } from 'playwright-bdd';
 const testDir = defineBddConfig({
   features: 'feature/**/*.feature',
 
-  steps: ['steps/**/*.ts', 'support/fixtures.ts'],
+  steps: ['steps/**/*.ts', 'support/fixtures.ts']
 });
 
 export default defineConfig({
   testDir,
+  
+  reporter: [
+    ['list'],
+
+    ['html', { 
+      outputFolder: 'reports/html',
+      open: 'never' 
+    }],
+
+    ['junit', { outputFile: 'reports/junit/results.xml' }],
+  ]
 });
