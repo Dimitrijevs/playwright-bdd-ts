@@ -18,13 +18,14 @@ type MyContext = {
       email?: string;
       mobileNumber?: string;
       gender?: string;
-      knownLanguages?: string[];
+      knownLanguages?: string;
       resumeFileName?: string;
       skills?: string[];
       jobRoles?: string[];
       selfRating?: number;
       availabilityDate?: string;
       availabilityTime?: string;
+      termsAccepted?: boolean;
     }
 };
 
