@@ -10,6 +10,21 @@ type MyContext = {
     socialMediaPost?: {
       authorUsername?: string;
       orderNumber?: number;
+    },
+    jobApplicationForm?: {
+      salutation?: string;
+      firstName?: string;
+      lastName?: string;
+      email?: string;
+      mobileNumber?: string;
+      gender?: string;
+      knownLanguages?: string[];
+      resumeFileName?: string;
+      skills?: string[];
+      jobRoles?: string[];
+      selfRating?: number;
+      availabilityDate?: string;
+      availabilityTime?: string;
     }
 };
 
@@ -20,7 +35,8 @@ export const test = base.extend<{ ctx: MyContext }>({
     // do not effect performance by putting heavy setup code here
     const ctx: MyContext = {
       purchasePage: {},
-      socialMediaPost: {}
+      socialMediaPost: {},
+      jobApplicationForm: {}
     }; 
     await use(ctx);
   },

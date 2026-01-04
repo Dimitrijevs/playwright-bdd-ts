@@ -5,7 +5,7 @@ Then('User enters {string} in the search input field', async ({page}, request: s
 
     const searchInput = page.getByTestId('search-input');
 
-    await searchInput.pressSequentially(request, { delay: 300 });
+    await searchInput.pressSequentially(request, { delay: 200 });
 });
 
 Then('User submits the search', async ({page}) => {
