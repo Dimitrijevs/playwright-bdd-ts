@@ -19,7 +19,7 @@ Then('User verifies that he is on the product listing page', async ({page}) => {
   await expect(productList).toBeVisible();
 });
 
-Then('User adds {int} {string} to the cart', async ({page}, amount: number, productName: string) => {
+When('User adds {int} {string} to the cart', async ({page}, amount: number, productName: string) => {
   
   const productCard = page.locator('div.MuiCardContent-root.flex.flex-col.items-center.justify-between.h-full.css-15q2cw4').filter({ 
     hasText: productName 
@@ -38,7 +38,7 @@ Then('User adds {int} {string} to the cart', async ({page}, amount: number, prod
   }
 });
 
-Then('User goes to the cart page', async ({page}) => {
+When('User goes to the cart page', async ({page}) => {
   
   const cartButton = page.locator(".MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary.MuiIconButton-sizeMedium.css-ncs2kv");
 
@@ -76,7 +76,7 @@ Then('User verifies that the total cost in the cart is equal to {int}', async ({
   ctx.purchasePage!.cartTotalCost = totalSum;
 });
 
-Then('User proceeds to add Address details for shipping', async ({page}) => {
+When('User proceeds to add Address details for shipping', async ({page}) => {
   
   await page.locator('button:has-text("Proceed to Address")').click();
 });
@@ -87,7 +87,7 @@ Then('User verifies that {string} button is disabled', async ({page}, buttonName
   await expect(proceedToPaymentButton).toBeDisabled();
 });
 
-Then('User enters {string}, {string}, {string} in the needed fields', async ({page, ctx}, firstName: string, lastName: string, street: string) => {
+When('User enters {string}, {string}, {string} in the needed fields', async ({page, ctx}, firstName: string, lastName: string, street: string) => {
 
   await page.getByRole('textbox', { name: 'First Name' }).fill(firstName);
   await page.getByRole('textbox', { name: 'Last Name' }).fill(lastName);
@@ -106,7 +106,7 @@ Then('User verifies that {string} button is enabled and clicks it', async ({page
   await proceedToPaymentButton.click();
 });
 
-Then('User selects {string} option', async ({page}, payNow: string) => {
+When('User selects {string} option', async ({page}, payNow: string) => {
 
   await page.getByRole('button', { name: payNow }).click();
 });

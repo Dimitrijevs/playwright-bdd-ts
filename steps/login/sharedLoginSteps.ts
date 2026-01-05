@@ -1,7 +1,6 @@
-import { expect } from "@playwright/test";
 import { createBdd } from "playwright-bdd";
 
-const { Given, When, Then } = createBdd();
+const { Then } = createBdd();
 
 Then(
   "User enters {string} and {string}",
