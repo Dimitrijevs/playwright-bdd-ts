@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 import { DataTable } from "playwright-bdd";
-import { Given, When, Then } from "../../support/fixtures";
+import { When, Then } from "../../support/fixtures";
 import { parse } from "path";
 
 When(

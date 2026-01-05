@@ -1,6 +1,6 @@
 Feature: Job Application Form Submission And Preview
 
-  @formSubmission
+  @FormSubmission @FormValidData
   Scenario: Form submission with valid data
     Given User is on the welcome page
     When User clicks on the challenges button
@@ -26,7 +26,7 @@ Feature: Job Application Form Submission And Preview
     When User previews the submitted data
     Then The previewed data matches the submitted data
 
-  @formSubmission
+  @FormSubmission @FormInvalidEmail
   Scenario: Form submission with invalid email
     Given User is on the welcome page
     When User clicks on the challenges button
@@ -50,7 +50,7 @@ Feature: Job Application Form Submission And Preview
     And User submits the form
     Then User should see the error message for invalid email
 
-  @skillsInput
+  @FormSubmission @SkillsInput
   Scenario: User can add and remove skills in the professional details section
     Given User is on the welcome page
     When User clicks on the challenges button

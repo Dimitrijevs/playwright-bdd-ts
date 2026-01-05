@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
-import { createBdd, DataTable } from "playwright-bdd";
+import { createBdd } from "playwright-bdd";
 
-const { Given, When, Then } = createBdd();
+const { When, Then } = createBdd();
 
 When('User adds the following skills: {string}', async ({page}, skillString: string) => {
   
