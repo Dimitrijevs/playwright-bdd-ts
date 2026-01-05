@@ -1,9 +1,9 @@
 import { expect } from "@playwright/test";
 import { createBdd } from "playwright-bdd";
 
-const { Given, When, Then } = createBdd();
+const { When, Then } = createBdd();
 
-Then('User selects price up to {int} from the Price Range filter dropdown', async ({page}, maxPrice: number) => {
+When('User selects price up to {int} from the Price Range filter dropdown', async ({page}, maxPrice: number) => {
   
   const totalRangeSteps: number = 80;
 
@@ -17,7 +17,7 @@ Then('User selects price up to {int} from the Price Range filter dropdown', asyn
   await expect(maxThumb).toHaveAttribute('aria-valuenow', maxPrice.toString());
 });
 
-Then('User clicks on the Reset Filters button', async ({page}) => {
+When('User clicks on the Reset Filters button', async ({page}) => {
   
   const resetButton = page.locator('button.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.MuiButton-outlinedSecondary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButton-colorSecondary.MuiButton-fullWidth.MuiButton-root.MuiButton-outlined.MuiButton-outlinedSecondary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButton-colorSecondary.MuiButton-fullWidth.css-16q1e93');
   

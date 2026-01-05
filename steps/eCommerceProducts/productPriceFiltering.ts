@@ -1,10 +1,9 @@
 import { expect } from "@playwright/test";
 import { createBdd } from "playwright-bdd";
-import { locators } from "../../support/locators";
 
-const { Given, When, Then } = createBdd();
+const { When, Then } = createBdd();
 
-Then('User selects {int} as the minimum price and {int} as the maximum price on the price range filter', async ({page}, minPrice: number, maxPrice: number) => {
+When('User selects {int} as the minimum price and {int} as the maximum price on the price range filter', async ({page}, minPrice: number, maxPrice: number) => {
     
     const totalRangeSteps: number = 80;
 

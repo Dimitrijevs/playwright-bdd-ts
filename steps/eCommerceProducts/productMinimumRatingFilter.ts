@@ -1,9 +1,9 @@
 import { expect } from "@playwright/test";
 import { createBdd } from "playwright-bdd";
 
-const { Given, When, Then } = createBdd();
+const { When, Then } = createBdd();
 
-Then('User clicks on the 4th star in the minimum rating filter', async ({page}) => {
+When('User clicks on the 4th star in the minimum rating filter', async ({page}) => {
   
     const fourthStar = page.locator("//span[@class='MuiRating-root MuiRating-sizeMedium css-r2qk9h']//span[4]");
     await fourthStar.click();

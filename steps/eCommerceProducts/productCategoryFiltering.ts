@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 import { createBdd } from "playwright-bdd";
 
-const { Given, When, Then } = createBdd();
+const { Then } = createBdd();
 
 Then(
   "User verifies that only products from the selected {string} category are displayed",
