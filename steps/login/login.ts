@@ -4,7 +4,7 @@ import { createBdd } from "playwright-bdd";
 
 const { Given, When, Then } = createBdd();
 
-Then("User clicks on the login button", async ({ page }) => {
+When("User clicks on the login button", async ({ page }) => {
   const loginButton = page.getByRole("button", { name: "Login" });
 
   await loginButton.click();
@@ -22,7 +22,7 @@ Then("User should see {string} based title", async ({ page }, role: string) => {
   );
 });
 
-Then("User press the logout button", async ({ page }) => {
+When("User press the logout button", async ({ page }) => {
     const logoutButton = page.getByRole('button', { name: 'Logout' });
 
     await logoutButton.click();

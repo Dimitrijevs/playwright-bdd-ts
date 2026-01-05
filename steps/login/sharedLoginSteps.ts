@@ -1,8 +1,8 @@
 import { createBdd } from "playwright-bdd";
 
-const { Then } = createBdd();
+const { When } = createBdd();
 
-Then(
+When(
   "User enters {string} and {string}",
   async ({ page }, username: string, password: string) => {
     const usernameField = page.getByRole("textbox", { name: "Username" });
