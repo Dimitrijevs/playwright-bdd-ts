@@ -1,14 +1,13 @@
-import { expect } from "@playwright/test";
-import { Given, When, Then } from "../../support/fixtures";
+import { When } from "../../support/fixtures";
 
-Then('User enters {string} in the search input field', async ({page}, request: string) => {
+When('User enters {string} in the search input field', async ({page}, request: string) => {
 
     const searchInput = page.getByTestId('search-input');
 
     await searchInput.pressSequentially(request, { delay: 200 });
 });
 
-Then('User submits the search', async ({page}) => {
+When('User submits the search', async ({page}) => {
   
     await page.getByTestId('search-button').click();
 });

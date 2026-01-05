@@ -1,5 +1,5 @@
 import { expect } from "@playwright/test";
-import { Given, When, Then } from "../../support/fixtures";
+import { Then } from "../../support/fixtures";
 
 Then('User verifies that no search results are displayed', async ({page}) => {
   
