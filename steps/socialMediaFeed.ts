@@ -21,7 +21,7 @@ Then('User verifies that the {int} post contains an profile image, username, pos
     ctx.socialMediaPost!.orderNumber = postNumber;
 });
 
-Then('User {word}s the post, verifies that the like count changes by {int}', async ({page, ctx}, action: string, oneLike: number) => {
+When('User {word}s the post, verifies that the like count changes by {int}', async ({page, ctx}, action: string, oneLike: number) => {
 
     const postThread = page.locator('div.flex.flex-col.space-y-6.w-full.max-w-md');
     const post = postThread.locator('> div').nth(ctx.socialMediaPost!.orderNumber!);
