@@ -7,6 +7,10 @@ on:
 
 jobs:
   test:
+    env:
+      RETRIES: 2
+      WORKERS: 4
+
     runs-on: ubuntu-latest
 
     steps:
