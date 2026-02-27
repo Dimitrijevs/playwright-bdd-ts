@@ -13,6 +13,14 @@ jobs:
       NAME: "GitHub Actions"
 
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "${{ env.GREETING }}, Hello, ${{ env.NAME }}!"
-      - run: echo "${{ env.MESSAGE }}"
+      - name: Hello Step
+        run: echo "${{ env.GREETING }}, Hello, ${{ env.NAME }}!"
+      - name: Message Step
+        run: echo "${{ env.MESSAGE }}"
+      - name: Mltiple Lines Step
+        run: |
+          echo "This is a multi-line command."
+          echo "It allows you to run several commands in one step."
+          echo "GitHub Actions makes it easy to automate your workflows!"
