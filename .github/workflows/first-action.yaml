@@ -1,0 +1,18 @@
+name: First Action
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    env:
+      GREETING: "Hello, World!"
+      MESSAGE: "This is my first GitHub Action workflow."
+      NAME: "GitHub Actions"
+
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ env.GREETING }}, Hello, ${{ env.NAME }}!"
+      - run: echo "${{ env.MESSAGE }}"
