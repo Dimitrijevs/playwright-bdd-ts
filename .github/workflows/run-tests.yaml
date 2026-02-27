@@ -8,22 +8,28 @@ on:
 jobs:
   test:
     env:
-      RETRIES: 2
-      WORKERS: 4
+      RETRIES: 1
+      WORKERS: 2
 
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "24"
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate and Run Playwright Tests
-        run: npx bddgen; npx playwright test
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Generate Tests
+        run: npx bddgen
+
+      - name: Run Playwright Tests
+        run: npx playwright test
